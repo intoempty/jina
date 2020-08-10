@@ -39,6 +39,10 @@
 
 Want a general introduction to neural search and how it's different to regular old symbolic search? [Check out our explainer blog post](https://medium.com/@jina_ai/what-is-jina-and-neural-search-7a9e166608ab) to learn more!
 
+# Key Concepts
+
+**Documents** are the things you want to search for. **Chunks** are semantic units of Documents (until 0.4.1, after which Documents just have nested Documents). **Configuration** is done in YAML files. **Executors** do the work; they are either **Encoders** who make Chunks into vectors, **Crafters** who segment or transform Documents and Chunks, **Indexers** who save or load vectors from storage, or **Rankers** who sort results. **Drivers** help Executors translate with the network. **Peas** encapsulate communications between Executors and can be non-local. **Pods** configure Peas who share runtime states. **Flow** manages all Pods across local or network environments. 
+
 <h2 align="center">Document & Chunk</h2>
 
 <img align="left" src="img/ILLUS1.png?raw=true" alt="Jina 101 Concept Document and Chunk, Copyright by Jina AI Limited" title="Jina 101 Concept Document and Chunk, Copyright by Jina AI Limited" hspace="10" width="30%"/>
@@ -77,8 +81,8 @@ How do we break down a Document into Chunks, and what happens next? **Executors*
 </p>
 
 The **Executors** are a big family. Each family member focuses on one important aspect of the search system. Let’s meet:
-- **Crafter**: for crafting/segmenting/transforming the Documents and Chunks;
 - **Encoder**: for representing the Chunk as vector;
+- **Crafter**: for crafting/segmenting/transforming the Documents and Chunks;
 - **Indexer**: for saving and retrieving vectors and key-value information from storage;
 - **Ranker**: for sorting results;
 

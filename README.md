@@ -48,19 +48,19 @@
 
 </p>
 
-Want to build a search system backed by deep learning? You've come to the right place!
+Build a multi-modal search system with deep learning that scales. 
 
-Jina is the easiest way to build neural search in the cloud. It provides an one-stop solution for multi-/cross-modality search. Jina has **long-term support** from a full-time, [venture-backed team](https://jina.ai). 
+Jina is the easiest way to build neural search in the cloud. A one-stop solution for anything-to-anything search with **long-term support** from a full-time, [venture-backed team](https://jina.ai). 
 
-⏱️ **Time Saver** - Bootstrapping an AI-powered search system with Jina takes just minutes, and saves engineers months of time! 
+⏱️ **Time Saver** - Bootstrapping an AI-powered search system with Jina takes only minutes. Look at our ["Hello, World"](#jina-hello-world-) for a fashion / e-commerce example.
 
-🧠 **First-class AI models** - Jina is a new design pattern for neural search systems, offering first-class support for [state-of-the-art AI models](https://docs.jina.ai/chapters/all_exec.html).  
+🧠 **First-class AI models** - Jina is a design pattern for neural search systems, offering first-class support for [state-of-the-art AI models](https://docs.jina.ai/chapters/all_exec.html).  
 
-🌌 **Universal Search** - Large-scale indexing and querying data of any kind on multiple platforms. Video, image, long/short text, music, source code, you name it!
+🌌 **Universal Search** - Large-scale indexing and querying of video, image, long/short text, music, source code or any kind of data. Neural search is universal. 
 
-🚀 **Production Ready** - Cloud-native features come out-of-the-box, e.g. containerization, microservice, distributing, scaling, sharding, async IO, REST, gRPC.
+🚀 **Production Ready** - Cloud-native from the start, Jina supports containerization, microservice, distributing, scaling, sharding, asynch IO, REST, gRPC.
 
-🧩 **Plug & Play** - Extend Jina with simple Python scripts or Docker images optimized for your search domain. [Check out Jina Hub](https://github.com/jina-ai/jina-hub) for more extensions.
+🧩 **Extensible** - Extend Jina with simple Python scripts or Docker images optimized for your search domain. [Check out Jina Hub](https://github.com/jina-ai/jina-hub) for more extensions.
 
 ## Contents
 
@@ -96,9 +96,9 @@ pip install jina
 
 To install Jina with extra dependencies, or install on Raspberry Pi [please refer to the documentation](https://docs.jina.ai).
 
-#### ...or Run in a Docker Container
+#### Run in a Docker Container
 
-We provide a universal Docker image (only 80MB!) that supports multiple architectures (including x64, x86, arm-64/v7/v6). Simply run:
+We provide a universal Docker image (only 80MB) that supports multiple architectures (including x64, x86, arm-64/v7/v6). Simply run:
 
 ```bash
 docker run jinaai/jina --help
@@ -198,7 +198,7 @@ f = (Flow().add(uses='encoder.yml', parallel=2)
 from jina.flow import Flow
 
 f = Flow().add(uses='encoder.yml', host='192.168.0.99')
-``` 
+```
 
 #### [Using a Docker Container](https://docs.jina.ai/chapters/hub/index.html)
 
@@ -207,7 +207,7 @@ from jina.flow import Flow
 
 f = (Flow().add(uses='jinahub/cnn-encode:0.1')
            .add(uses='jinahub/faiss-index:0.2', host='192.168.0.99'))
-``` 
+```
 
 #### Concatenating Embeddings
 
@@ -217,7 +217,7 @@ from jina.flow import Flow
 f = (Flow().add(name='eb1', uses='BiTImageEncoder')
            .add(name='eb2', uses='KerasImageEncoder', needs='gateway')
            .join(needs=['eb1', 'eb2'], uses='_concat'))
-``` 
+```
 
 #### [Enabling Network Queries](https://docs.jina.ai/chapters/restapi/index.html)
 
@@ -228,7 +228,7 @@ f = Flow(port_expose=45678, rest_api=True)
 
 with f:
     f.block()
-``` 
+```
 
 Intrigued? Play with different options:
 
@@ -257,7 +257,7 @@ With [Cookiecutter](https://github.com/cookiecutter/cookiecutter) you can easily
     </a>
     </td>
     <td width="70%">
-&nbsp;&nbsp;<h3><a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">Jina 101: First Thing to Learn About Jina</a></h3>
+&nbsp;&nbsp;<h3><a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">Jina 101: First Things to Learn About Jina</a></h3>
 &nbsp;&nbsp;<a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">English</a> •
   <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.ja.md">日本語</a> •
   <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.fr.md">français</a> •
